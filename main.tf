@@ -13,6 +13,19 @@
 # If you're looking for the configuration for the remote backend, you can find that
 # in backend.tf.
 
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.28.0"
+    }
+  }
+}
+
+provider "aws" {
+  # Configuration options
+}
+
 
 resource "fakewebservices_vpc" "primary_vpc" {
   name       = "Primary VPC"
